@@ -42,6 +42,10 @@ gem 'httparty'
 # use Clockwork to schedule jobs
 gem 'clockwork'
 
+# use sidekiq to manage background jobs
+gem 'sidekiq'
+
+# use Postgres for db
 gem 'pg'
 
 group :development, :test do
