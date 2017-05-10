@@ -4,9 +4,7 @@ namespace :scheduled_tasks do
 
   desc "Runs scheduled tasks"
   task :environment do
-    Clockwork.every(10.seconds, "events.jobs") {
-      SendWeatherReportJob.perform_now
-    }
-    Clockwork.run
+    # SendWeatherReportJob.perform_now
+    DefaultWorker.perform_async
   end
 end
