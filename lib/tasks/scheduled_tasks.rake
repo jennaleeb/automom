@@ -3,8 +3,8 @@ namespace :scheduled_tasks do
   Dir[File.join('.', "app/jobs/*.rb")].each{ |f| require f }
 
   desc "Runs scheduled tasks"
-  task :environment do
-    # SendWeatherReportJob.perform_now
-    DefaultWorker.perform_async
+  task :emails do
+    SendWeatherReportJob.perform_later
+    # DefaultWorker.perform_async
   end
 end
