@@ -5,6 +5,5 @@ namespace :scheduled_tasks do
   desc "Runs scheduled tasks"
   task :emails do
     SendWeatherReportJob.perform_later
-    # DefaultWorker.perform_async
   end
 end
