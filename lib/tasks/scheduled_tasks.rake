@@ -5,7 +5,7 @@ namespace :scheduled_tasks do
   desc "Runs scheduled tasks"
   task :emails do
     FamilyMember.all.each do |family_member|
-      SendWeatherReportJob.perform_async(family_member_id: family_member.id)
+      SendWeatherReportJob.perform_async(family_member.id)
       puts "Executing SendWeatherReportJob for #{family_member.name}"
     end
   end
