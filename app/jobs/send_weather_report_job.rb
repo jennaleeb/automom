@@ -3,6 +3,7 @@ class SendWeatherReportJob
   include Sidekiq::Worker
 
   def perform(family_member_id)
-    WeatherReportMailer.greet(family_member_id).deliver_now
+    family_member = FamilyMember.find(family_member_id)
+    WeatherReportMailer.greet(family_member).deliver_now
   end
 end
