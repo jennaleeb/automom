@@ -6,6 +6,6 @@ include Clockwork
 # what we really want is
 # every(1.day, 'send_weather_report_job', at: '08:00')
 
-every(30.seconds, 'send_weather_report_job') {
+every(10.seconds, 'send_weather_report_job') {
   `rake scheduled_tasks:emails`
 }
