@@ -1,9 +1,8 @@
-class SendWeatherReportJob < ApplicationJob
-  queue_as :default
+class SendWeatherReportJob
+  # queue_as :default
+  include Sidekiq::Worker
 
-  def perform
-    FamilyMember.all.each do |family_member|
-      WeatherReportMailer.greet(family_member).deliver_now
-    end
+  def perform(family_member_id)
+    WeatherReportMailer.greet(family_member_id).deliver_now
   end
 end
