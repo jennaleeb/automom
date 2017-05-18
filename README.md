@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the demo app used in my talk "Background Jobs in Rails" hosted at [RailsGirlsTO](https://www.meetup.com/railsgirlsTO/events/239808299/).
 
-Things you may want to cover:
+You can find the slides [here](https://github.com/jennaleeb/automom/blob/master/BackgroundJobs.pdf).
 
-* Ruby version
+### Some setup to play around with the demo app
 
-* System dependencies
+1. `git clone https://github.com/jennaleeb/automom.git`
 
-* Configuration
+2. Make a file in your root called `.env` (this will be for storing your super secret environment variables like your email password and API keys)
 
-* Database creation
+3. Set up your email client according to the ActionMailer [config instructions](http://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration) 
 
-* Database initialization
+4. Make an account at https://darksky.net/dev/
 
-* How to run the test suite
+5. ...
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+6. Profit
